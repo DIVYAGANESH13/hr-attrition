@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Attrition Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>HR Attrition Prediction</h1>
+    <form method="POST" action="/">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="income">Monthly Income:</label>
+        <input type="number" id="income" name="income" required><br>
+
+        <label for="distance">Distance from Home:</label>
+        <input type="number" id="distance" name="distance" required><br>
+
+        <label for="education">Education:</label>
+        <input type="number" id="education" name="education" required><br>
+
+        <label for="years_at_company">Years at Company:</label>
+        <input type="number" id="years_at_company" name="years_at_company" required><br>
+
+        <label for="job_satisfaction">Job Satisfaction:</label>
+        <input type="number" id="job_satisfaction" name="job_satisfaction" required><br>
+
+        <label for="num_companies_worked">Num Companies Worked:</label>
+        <input type="number" id="num_companies_worked" name="num_companies_worked" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <h2>Prediction Result: {{ prediction }}</h2>
+    <p>{{ error_message }}</p>  <!-- Show error message if any -->
+</body>
+</html>
