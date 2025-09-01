@@ -27,5 +27,5 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests
-        run: |
-          pytest   # change/remove if you don’t have tests
+        run: pytest
+
